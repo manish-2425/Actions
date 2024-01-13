@@ -22,7 +22,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: file existence
-          run: grep -i "manish " >> manish.txt
+          run: grep -i "manish " manish.txt
 
     deploy_job:
         needs: test_job
