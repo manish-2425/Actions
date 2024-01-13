@@ -3,18 +3,27 @@ name: shell script Workflow
 on: push
 
 jobs:
-    first_job:
+    build_job:
         runs-on: ubuntu-latest
         steps:
         - name: checkout Repo
           uses: actions/checkout@v4
           
         - name: Creating file
-          run: mkdir manish
-        - name: listing
-          run: ls -l
+          run: touch manish.txt
+        
         - name: permission
-          run: chmod +x a.sh
+          run: chmod +rwx a.sh
 
         - name: execution of ascii
           run: ./a.sh
+    test_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: file existence
+          run: grep -i "manish " >> manish.txt
+    build_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: creation of directory
+          run: echo "I am build jobs"
