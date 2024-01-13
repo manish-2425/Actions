@@ -17,12 +17,20 @@ jobs:
 
         - name: execution of ascii
           run: ./a.sh
+        - name: upload Artifacts
+          uses: actions/upload-artifact@v4
+          with:
+           name: manish.txt
+           path: manish.txt 
     test_job:
         needs: build_job
         runs-on: ubuntu-latest
         steps:
-        - name: creation of file
-          run: echo "manish is at Google" >> manish.txt
+        - name: download Artifacts
+          uses: actions/download-artifact@v4
+          with:
+           name: manish.txt
+           
         - name: file existence
           run: grep -i "manish " manish.txt
 
