@@ -22,7 +22,8 @@ jobs:
         steps:
         - name: file existence
           run: grep -i "manish " >> manish.txt
-    build_job:
+
+    deploy_job:
         runs-on: ubuntu-latest
         steps:
         - name: creation of directory
