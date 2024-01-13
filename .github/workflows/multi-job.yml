@@ -1,0 +1,20 @@
+name: shell script Workflow
+
+on: push
+
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: checkout Repo
+          uses: actions/checkout@v4
+          
+        - name: Creating file
+          run: mkdir manish
+        - name: listing
+          run: ls -l
+        - name: permission
+          run: chmod +x a.sh
+
+        - name: execution of ascii
+          run: ./a.sh
