@@ -22,7 +22,7 @@ jobs:
           with:
            name: manish_artifacts
            path: /root/manish.txt 
-    test_job:
+    test_job: 
         needs: build_job
         runs-on: ubuntu-latest
         steps:
