@@ -10,7 +10,7 @@ jobs:
           uses: actions/checkout@v4
           
         - name: Creating file
-          run: touch /root/manish.txt
+          run: sudo touch /root/manish.txt
         
         - name: permission
           run: chmod +rwx a.sh
