@@ -10,7 +10,7 @@ jobs:
           uses: actions/checkout@v4
           
         - name: Creating file
-          run: touch manish.txt
+          run: touch /root/manish.txt
         
         - name: permission
           run: chmod +rwx a.sh
@@ -20,8 +20,8 @@ jobs:
         - name: upload Artifacts
           uses: actions/upload-artifact@v4
           with:
-           name: manish.txt
-           path: manish.txt 
+           name: manish_artifacts
+           path: /root/manish.txt 
     test_job:
         needs: build_job
         runs-on: ubuntu-latest
