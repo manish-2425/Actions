@@ -30,7 +30,7 @@ jobs:
         - name: download Artifacts
           uses: actions/download-artifact@v4
           with:
-           name: manish.txt
+           name: manish_artifacts
 
         - name: listing
           run: ls -l   
