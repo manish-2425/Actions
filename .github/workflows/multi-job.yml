@@ -35,7 +35,7 @@ jobs:
         - name: listing
           run: ls -l   
         - name: file existence
-          run: grep  "Manish " manish.txt
+          run: grep  "Manish" manish.txt
 
     deploy_job:
         needs: test_job
