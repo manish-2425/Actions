@@ -37,7 +37,7 @@ jobs:
           run: |
               ls -l 
               pwd
-              chmod rwx manish.txt
+              chmod +rwx manish.txt
               cat manish.txt 
 
 #        - name: file existence
