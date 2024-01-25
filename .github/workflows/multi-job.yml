@@ -39,7 +39,7 @@ jobs:
           run: pwd
 
         - name: cancatenation
-          run: cat /home/runner/work/Actions/Actions/manish.txt 
+          run: cat manish.txt 
 
         - name: file existence
           run: grep -i "manish" /home/runner/work/Actions/Actions/manish.txt
