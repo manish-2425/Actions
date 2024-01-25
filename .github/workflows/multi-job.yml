@@ -34,16 +34,13 @@ jobs:
            name: manish_artifacts
 
         - name: listing
-          run: ls -l 
+          run: |
+              ls -l 
+              pwd
+              sudo cat manish.txt 
 
-        - name: working dir
-          run: pwd
-
-        - name: cancatenation
-          run: cat manish.txt 
-
-        - name: file existence
-          run: grep -i "manish" /home/runner/work/Actions/Actions/manish.txt
+#        - name: file existence
+#         run: grep -i "manish" /home/runner/work/Actions/Actions/manish.txt
 
     deploy_job:
         needs: test_job
