@@ -37,7 +37,7 @@ jobs:
         - name: cat
           run: sudo cat manish.txt   
         - name: file existence
-          run: sudo grep  "Manish" manish.txt
+          run: sudo grep -i "Manish" manish.txt
 
     deploy_job:
         needs: test_job
