@@ -33,9 +33,10 @@ jobs:
            name: manish_artifacts
 
         - name: listing
-          run: ls -l 
+          run: ls -l /home/runner/work/Actions/Actions
         - name: cat
-          run: sudo cat manish.txt   
+          run: sudo cat manish.txt 
+
         - name: file existence
           run: sudo grep -i "Manish" manish.txt
 
