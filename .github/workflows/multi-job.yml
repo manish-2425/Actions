@@ -33,8 +33,12 @@ jobs:
            name: manish_artifacts
 
         - name: listing
-          run: ls -l /home/runner/work/Actions/Actions
-        - name: cat
+          run: ls -l 
+
+        - name: working dir
+          run: pwd
+
+        - name: cancatenation
           run: cat /home/runner/work/Actions/Actions/manish.txt 
 
         - name: file existence
