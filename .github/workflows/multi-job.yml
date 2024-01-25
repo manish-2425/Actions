@@ -33,7 +33,9 @@ jobs:
            name: manish_artifacts
 
         - name: listing
-          run: ls -l   
+          run: ls -l 
+        - name: listing
+          run: cat manish.txt   
         - name: file existence
           run: grep  "Manish" manish.txt
 
