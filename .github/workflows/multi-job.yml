@@ -11,7 +11,8 @@ jobs:
           
         - name: Creating file
           run: sudo touch manish.txt
-        
+        - name: permission
+          run: chmod +rwx manish.txt
         - name: permission
           run: chmod +rwx a.sh
 
