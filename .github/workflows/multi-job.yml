@@ -34,10 +34,10 @@ jobs:
 
         - name: listing
           run: ls -l 
-        - name: listing
-          run: cat manish.txt   
+        - name: cat
+          run: sudo cat manish.txt   
         - name: file existence
-          run: grep  "Manish" manish.txt
+          run: sudo grep  "Manish" manish.txt
 
     deploy_job:
         needs: test_job
