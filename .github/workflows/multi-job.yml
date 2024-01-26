@@ -50,5 +50,5 @@ jobs:
               chmod +rwx manish.txt
               cat manish.txt 
 
-#        - name: file existence
-#         run: grep -i "manish" /home/runner/work/Actions/Actions/manish.txt      
+        - name: file existence
+          run: grep -i "manish" /home/runner/work/Actions/Actions/manish.txt      
