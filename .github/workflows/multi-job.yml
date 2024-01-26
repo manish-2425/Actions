@@ -11,8 +11,15 @@ jobs:
           
         - name: Creating file
           run: sudo touch manish.txt
+
+        - name: Listing file
+          run: ls -l 
+                        
         - name: permission
           run: sudo chmod +rwx manish.txt
+        - name: Listing file
+          run: ls -l
+
         - name: permission
           run: chmod +rwx a.sh
 
@@ -23,29 +30,4 @@ jobs:
           with:
            name: manish_artifacts
            path: manish.txt 
-    test_job: 
-        needs: build_job
-        runs-on: ubuntu-latest
-        steps:
-        
-        - name: download Artifacts
-          uses: actions/download-artifact@v4
-          with:
-           name: manish_artifacts
-
-        - name: listing
-          run: |
-              ls -l 
-              pwd
-              chmod +rwx manish.txt
-              cat manish.txt 
-
-#        - name: file existence
-#         run: grep -i "manish" /home/runner/work/Actions/Actions/manish.txt
-
-    deploy_job:
-        needs: test_job
-        runs-on: ubuntu-latest
-        steps:
-        - name: creation of directory
-          run: echo "I am build jobs"
+          
