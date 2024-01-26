@@ -10,7 +10,7 @@ jobs:
           uses: actions/checkout@v4
           
         - name: Creating file
-          run: sudo touch manish.txt
+          run: touch manish.txt
 
         - name: Listing file
           run: ls -l 
