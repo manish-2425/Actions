@@ -25,7 +25,7 @@ jobs:
 
         - name: execution of ascii
           run: ./a.sh
-          
+
         - name: Listing file
           run: cat manish.txt
 
@@ -34,4 +34,21 @@ jobs:
           with:
            name: manish_artifacts
            path: manish.txt 
-          
+    test_job: 
+        needs: build_job
+        runs-on: ubuntu-latest
+        steps:
+        - name: download Artifacts
+          uses: actions/download-artifact@v4
+          with:
+           name: manish_artifacts
+
+        - name: listing
+          run: |
+              ls -l 
+              pwd
+              chmod +rwx manish.txt
+              cat manish.txt 
+
+#        - name: file existence
+#         run: grep -i "manish" /home/runner/work/Actions/Actions/manish.txt      
