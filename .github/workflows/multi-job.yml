@@ -25,6 +25,10 @@ jobs:
 
         - name: execution of ascii
           run: ./a.sh
+          
+        - name: Listing file
+          run: cat manish.txt
+
         - name: upload Artifacts
           uses: actions/upload-artifact@v4
           with:
