@@ -3,8 +3,8 @@ name: my first job
 on: workflow_dispatch
 
 jobs:
-    first job:
-        run-on: ubuntu-latest
+    first-job:
+        runs-on: ubuntu-latest
         steps:
             - name: welcome message
               run: echo "Hello Welcome back"
