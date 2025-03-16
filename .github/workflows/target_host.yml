@@ -1,0 +1,21 @@
+name: Deploy to environment
+
+on: 
+  workflow_call: 
+    inputs: 
+      environment:
+        type: string
+        required: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+  steps:
+   - name: printing variable value
+     run: |
+         environment=${{ github.event.inputs.environment }}
+         lowercase_env=$(echo "$environment" | tr '[:upper:]' '[:upper:]' )
+         echo "environment=$environment" >> $GITHUB_ENV
+         echo "lowercase_env=$lowercase_env" >> $GITHUB_ENV
+         target_identifier=$(echo "$lowercase_env""_"${{ var.MULE_HOST_NAME }})
+  
