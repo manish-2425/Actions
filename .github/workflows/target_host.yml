@@ -13,9 +13,9 @@ jobs:
   steps:
    - name: printing variable value
      run: |
-         environment=${{ github.event.inputs.environment }}
-         lowercase_env=$(echo "$environment" | tr '[:upper:]' '[:upper:]' )
-         echo "environment=$environment" >> $GITHUB_ENV
-         echo "lowercase_env=$lowercase_env" >> $GITHUB_ENV
-         target_identifier=$(echo "$lowercase_env""_"${{ var.MULE_HOST_NAME }})
+          environment=${{ inputs.environment }}
+          lowercase_env=$(echo "$environment" | tr '[:upper:]' '[:upper:]' )
+          echo "environment=$environment" >> $GITHUB_ENV
+          echo "lowercase_env=$lowercase_env" >> $GITHUB_ENV
+          target_identifier=$(echo "$lowercase_env""_"${{ var.MULE_HOST_NAME }})
   
