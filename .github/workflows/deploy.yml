@@ -9,7 +9,7 @@ on:
 jobs:      
   deploy:
     runs-on: ubuntu-latest
-    environment: "${{ input.environment }}"
+    environment: "${{ inputs.environment }}"
 
     steps:
     - name: Run Deployment command
