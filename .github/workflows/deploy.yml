@@ -1,0 +1,28 @@
+name:  Deploy to environment
+
+on: 
+   workflow_call:
+     inputs:
+       environment:
+         type: string
+         required: true
+jobs:      
+  deploy:
+    runs-on: ubuntu-latest
+    environment: "${{ input.environment }}"
+
+  steps:
+    - name: Run Deployment command
+      env: 
+        MULE_HOST_NAME: "${{ vars.MULE_HOST_NAME }}"
+      run: |
+        if [[ "$environment" == "PROD" || "$environment" == "R1C2NFT"]]; then
+           echo "this is Prod "
+        elif [[ "$environment" == "R1C3DEV" && "$MULE_HOST_NAME" == "a"]]; then
+           echo "this is a "
+        elif [[ "$environment" == "R1C3DEV" && "$MULE_HOST_NAME" == "b"]]; then
+           echo "this is b "
+      
+       
+      
+         
