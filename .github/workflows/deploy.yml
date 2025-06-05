@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: "${{ input.environment }}"
 
-  steps:
+    steps:
     - name: Run Deployment command
       env: 
         MULE_HOST_NAME: "${{ vars.MULE_HOST_NAME }}"
