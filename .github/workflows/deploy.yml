@@ -12,6 +12,10 @@ jobs:
     environment: "${{ inputs.environment }}"
 
     steps:
+    - name: Debug Variables
+      run: |
+        echo "Environment: $environment"
+        echo "MULE_HOST_NAME: $MULE_HOST_NAME"
     - name: Run Deployment command
       env: 
         MULE_HOST_NAME: "${{ vars.MULE_HOST_NAME }}"
