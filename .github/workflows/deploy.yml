@@ -9,9 +9,8 @@ on:
 jobs:      
   deploy:
     runs-on: ubuntu-latest
-    
     env: 
-        MULE_HOST_NAME: "${{ vars.MULE_HOST_NAME }}"
+        MULE_HOST_NAME: ${{ vars.MULE_HOST_NAME }}
         environment: ${{ github.event.inputs.environment }}
     steps:
     - name: Debug Variables
