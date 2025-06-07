@@ -9,6 +9,7 @@ on:
 jobs:      
   deploy:
     runs-on: ubuntu-latest
+    environment: R1C£DEV
     env: 
         MULE_HOST_NAME: "${{ vars.MULE_HOST_NAME }}"
         environment: "${{ github.event.inputs.environment }}"
