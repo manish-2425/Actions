@@ -19,7 +19,7 @@ jobs:
         echo "MULE_HOST_NAME: $MULE_HOST_NAME"
     - name: Run Deployment command
       env: 
-        MULE_HOST_NAME: "${{ vars.MULE_HOST_NAME }}"
+        MULE_HOST_NAME: $MULE_HOST_NAME
       run: |
         if [[ "$environment" == "PROD" || "$environment" == "R1C2NFT" ]]; then
            echo "this is Prod "
