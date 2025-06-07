@@ -24,6 +24,8 @@ jobs:
            echo "this is Prod "
         elif [[ "$environment" == "R1C3DEV" && "$MULE_HOST_NAME" == "a" ]]; then
            echo "this is a "
+           MULE_HOST_NAME: "${{ vars.MULE_HOST_NAME }}"
+           echo "MULE_HOST_NAME: $MULE_HOST_NAME"
         elif [[ "$environment" == "R1C3DEV" && "$MULE_HOST_NAME" == "b" ]]; then
            echo "this is b "
         fi
